@@ -37,7 +37,7 @@
                                     <input type="radio" name="q1" id="qa" value=1 />
                                     <label for="qa" class="text-center">a) Quillboar</label>
                                 </div>
-                                <div class="row justify-content-center">
+                                <div class="row justify-content-center" id="correct">
                                     <input type="radio" name="q1" id="qb" value=1 />
                                     <label for="qb" class="text-center">b) Murlocs</label>
                                 </div>
@@ -67,7 +67,7 @@
                                     <label for="qa" class="text-center">a) @</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q2" id="qb" value=1 />
+                                    <input type="radio" name="q2" id="qb correct" value=1 />
                                     <label for="qb" class="text-center">b) !</label>
                                 </div>
                                 <div class="row justify-content-center">
@@ -96,7 +96,7 @@
                                     <label for="qa" class="text-center">a) Brightmane</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q3" id="qb" value=1 />
+                                    <input type="radio" name="q3" id="qb correct" value=1 />
                                     <label for="qb" class="text-center">b) Invincible</label>
                                 </div>
                                 <div class="row justify-content-center">
@@ -129,7 +129,7 @@
                                     <label for="qb" class="text-center">b) Corporate</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q4" id="qc" value=1 />
+                                    <input type="radio" name="q4" id="qc correct" value=1 />
                                     <label for="qc" class="text-center">c) Tribal</label>
                                 </div>
                                 <div class="row justify-content-center">
@@ -162,7 +162,7 @@
                                     <label for="qc" class="text-center">c) South</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q5" id="qd" value=1 />
+                                    <input type="radio" name="q5" id="qd correct" value=1 />
                                     <label for="qd" class="text-center">d) West</label>
                                 </div>
                                 <div class="row" class="justify-content-center">
@@ -183,7 +183,7 @@
                                     <label for="qa" class="text-center">a) Varimathras</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q6" id="qb" value=1 />
+                                    <input type="radio" name="q6" id="qb correct" value=1 />
                                     <label for="qb" class="text-center">b) Mal'ganis</label>
                                 </div>
                                 <div class="row justify-content-center">
@@ -216,7 +216,7 @@
                                     <label for="qb" class="text-center">b) Cataclysm</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q7" id="qc" value=1 />
+                                    <input type="radio" name="q7" id="qc correct" value=1 />
                                     <label for="qc" class="text-center">c) The Frozen Throne</label>
                                 </div>
                                 <div class="row justify-content-center">
@@ -249,7 +249,7 @@
                                     <label for="qc" class="text-center">c) Leatherworking</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q8" id="qd" value=1 />
+                                    <input type="radio" name="q8" id="qd correct" value=1 />
                                     <label for="qd" class="text-center">d) Architecture</label>
                                 </div>
                                 <div class="row" class="justify-content-center">
@@ -260,7 +260,7 @@
                             <!--Question 9-->
                             <div id="question9" class="mx-auto question">
                                 <div class="row justify-content-center">
-                                    <h2 class="text-center">Which of these chemical elements from the periodic table are not used in-game as part of the three base monetary units?</h2>
+                                    <h2 class="text-center">Which of these precious materials are not used in-game as part of the three base monetary units?</h2>
                                 </div>
                                 <div class="row">
                                     &nbsp;
@@ -278,7 +278,7 @@
                                     <label for="qc" class="text-center">c) Gold</label>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q9" id="qd" value=1 />
+                                    <input type="radio" name="q9" id="qd correct" value=1 />
                                     <label for="qd" class="text-center">d) Diamond</label>
                                 </div>
                                 <div class="row" class="justify-content-center">
@@ -295,12 +295,12 @@
                                     &nbsp;
                                 </div>
                                 <div class="row justify-content-center">
-                                    <input type="radio" name="q10" id="qa" value=1 />
-                                    <label for="qa" class="text-center">a) Heartstone</label>
+                                    <input type="radio" name="q10" id="qa correct" value=1 />
+                                    <label for="qa" class="text-center">a) Hearthstone</label>
                                 </div>
                                 <div class="row justify-content-center">
                                     <input type="radio" name="q10" id="qb" value=1 />
-                                    <label for="qb" class="text-center">b) Hearthstone</label>
+                                    <label for="qb" class="text-center">b) Heartstone</label>
                                 </div>
                                 <div class="row justify-content-center">
                                     <input type="radio" name="q10" id="qc" value=1 />
@@ -311,14 +311,14 @@
                                     <label for="qd" class="text-center">d) "Take Me Home" Stone</label>
                                 </div>
                                 <div class="row" class="justify-content-center">
-                                    <input type="button" value="Next"class="btn btn-success mx-auto" onclick="results()"/>
+                                    <input type="button" value="Next" class="btn btn-success mx-auto" id="answerChecker" onclick="results()"/>
                                 </div>
                             </div>
                         </form>
 
                         <!--Results-->
                         <div id="results" class="justify-content-center mx-auto">
-                            <h2 class="text-center">You are a </h2>
+                            <h2 class="text-center">How well did you do?</h2>
                             <br /><br />
                             <p class="text-center" id="result"></p>
                         </div>
