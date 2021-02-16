@@ -2,7 +2,7 @@ body {
     text-align: center;
 }
 
-.question, #results {
+.question, #results, #two {
     display: none;
     width: 750px;
 }

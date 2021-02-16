@@ -1,65 +1,44 @@
-/* Hides intro section and shows Question 1 */
-function startQuiz() {
-    document.getElementById("intro-area").style.display = "none";
-    document.getElementById("question1").style.display = "inline-block";
+/* Hides the previous question and shows the next */
+function showNextQuestion(current, next) {
+    document.getElementById(current).style.display = "none";
+    document.getElementById(next).style.display = "inline-block";
 }
 
-/* Hides Question 1 and shows Question 2 */
-function question2() {
-    document.getElementById("question1").style.display = "none";
-    document.getElementById("question2").style.display = "inline-block";
+/* Calculating the score out of 100 */
+function revealResults() {
+    showNextQuestion("question10", "results");
+    
+    var score = 0;
+    score += parseInt(getSelectedRadioValue("q1")) || 0;
+    score += parseInt(getSelectedRadioValue("q2")) || 0;
+    score += parseInt(getSelectedRadioValue("q3")) || 0;
+    score += parseInt(getSelectedRadioValue("q4")) || 0;
+    score += parseInt(getSelectedRadioValue("q5")) || 0;
+    score += parseInt(getSelectedRadioValue("q6")) || 0;
+    score += parseInt(getSelectedRadioValue("q7")) || 0;
+    score += parseInt(getSelectedRadioValue("q8")) || 0;
+    score += parseInt(getSelectedRadioValue("q9")) || 0;
+    score += parseInt(getSelectedRadioValue("q10")) || 0;
+
+    if (score <= 20) {
+        document.getElementById("result").innerHTML = "You are a peon.";
+    } else if (score <= 40 && score > 20) {
+        document.getElementById("result").innerHTML = "You are a murloc.";
+    } else if (score <= 60 && score > 40) {
+        document.getElementById("result").innerHTML = "You are a knight.";
+    } else if (score <= 80 && score > 60) {
+        document.getElementById("result").innerHTML = "You are a wizard.";
+    } else {
+        document.getElementById("result").innerHTML = "You are a god.";
+    }
 }
 
-/* Hides Question 2 and shows Question 3 */
-function question3() {
-    document.getElementById("question2").style.display = "none";
-    document.getElementById("question3").style.display = "inline-block";
-}
-
-/* Hides Question 3 and shows Question 4 */
-function question4() {
-    document.getElementById("question3").style.display = "none";
-    document.getElementById("question4").style.display = "inline-block";
-}
-
-/* Hides Question 4 and shows Question 5 */
-function question5() {
-    document.getElementById("question4").style.display = "none";
-    document.getElementById("question5").style.display = "inline-block";
-}
-
-/* Hides Question 5 and shows Question 6 */
-function question6() {
-    document.getElementById("question5").style.display = "none";
-    document.getElementById("question6").style.display = "inline-block";
-}
-
-/* Hides Question 6 and shows Question 7 */
-function question7() {
-    document.getElementById("question6").style.display = "none";
-    document.getElementById("question7").style.display = "inline-block";
-}
-
-/* Hides Question 7 and shows Question 8 */
-function question8() {
-    document.getElementById("question7").style.display = "none";
-    document.getElementById("question8").style.display = "inline-block";
-}
-
-/* Hides Question 8 and shows Question 9 */
-function question9() {
-    document.getElementById("question8").style.display = "none";
-    document.getElementById("question9").style.display = "inline-block";
-}
-
-/* Hides Question 9 and shows Question 10 */
-function question10() {
-    document.getElementById("question9").style.display = "none";
-    document.getElementById("question10").style.display = "inline-block";
-}
-
-/* Hides Question 10 and shows results section */
-function results() {
-    document.getElementById("question10").style.display = "none";
-    document.getElementById("results").style.display = "inline-block";
+/*Returning the value of each of the checked radio boxes */
+function getSelectedRadioValue(name) {
+    var radios = document.getElementsByName(name);
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            return radios[i].value;
+        }
+    }
 }
